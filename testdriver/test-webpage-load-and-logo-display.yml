@@ -1,0 +1,13 @@
+version: 4.1.27
+steps:
+  - prompt: Load the webpage in the browser.
+    commands:
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: >-
+      Assert that the PubNub logo is visible on the page.  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: the PubNub logo is visible on the page
