@@ -1,0 +1,18 @@
+version: 4.1.27
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click on the "Contact sales" link.
+    commands:
+      - command: hover-text
+        text: Contact sales
+        description: contact sales button in the main content area
+        action: click
+  - prompt: >-
+      Assert that the contact page or form appears successfully.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: Contact our experts! form is visible
